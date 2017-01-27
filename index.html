@@ -7,22 +7,21 @@
     <link href="css/print.css" rel="stylesheet" type="text/css" />
     <link href='css/fonts.css' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <!-- 
     <script src="https://tutorial.amp.ai/libs/xxx.js" amp-config='{domain: "https://tutorial.amp.ai"}'></script>
     -->
-    <script>
-    var random_images_array = ["car.jpeg", "flowers.jpeg"];
-    }
-    </script>
 </head>
 <body class='home' data-last-page='/'>
     <script type="text/javascript">
+    var imgAr = ["car.jpeg", "flowers.jpeg"];
     var num = Math.floor( Math.random() * imgAr.length );
     var img = imgAr[ num ];
     var imgStr = $('<img src="images/' + img + '" alt = "">').appendTo(document.body);
-    var buy = $('<input type="submit" text="Buy" id="Buy"></button>').appendTo(document.body);
-             // Let Amp observe if user clicked the link
-    <!-- buy.click(function() { amp.observe("Buy"); }); -->
+    var like = $('<p><input type="submit" text="Like" id="Like"></button>').appendTo(document.body);
+
+    // Let Amp observe if user clicked the link
+    <!-- like.click(function() { amp.observe("Like"); }); -->
     </script>
 </body>
 </html>
