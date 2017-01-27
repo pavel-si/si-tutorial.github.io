@@ -14,14 +14,14 @@
 </head>
 <body class='home' data-last-page='/'>
     <script type="text/javascript">
-    var imgAr = ["car.jpeg", "flowers.jpeg"];
+    var imgAr = ["car", "flowers"];
     var num = Math.floor( Math.random() * imgAr.length );
     var img = imgAr[ num ];
-    var imgStr = $('<img src="images/' + img + '" alt = "">').appendTo(document.body);
-    var like = $('<p><input type="submit" text="Like" id="Like"></button>').appendTo(document.body);
+    var imgStr = $('<img src="images/' + img + '.jpeg" alt = "">').appendTo(document.body);
+    var like = $('<p><button type="button" id="Like">Like></button>').appendTo(document.body);
 
     // Let Amp observe if user clicked the link
-    <!-- like.click(function() { amp.observe("Like"); }); -->
+    like.click(function() { amp.observe("Like", {img: img} ); });
     </script>
 </body>
 </html>
